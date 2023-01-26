@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-import java.util.ArrayList;
-
 public class Shop {
     ArrayList<Item> itemList = new ArrayList<Item>();
 
@@ -20,6 +18,8 @@ public class Shop {
     public void buyItem(Player player, int itemIndex) {
         if (player.Money >= itemList.get(itemIndex).price) {
             player.Money -= itemList.get(itemIndex).price;
+            player.inventory.add(itemList.get(itemIndex));
+            System.out.println("You just bought a " + itemList.get(itemIndex).name);
         } else {
             System.out.println("Not enough money");
         }
@@ -28,7 +28,7 @@ public class Shop {
     public void printItemList() {
         int index = 0;
         for (Item item : itemList) {
-            System.out.println(index + ": " + item.name + "Item price is " + item.price);
+            System.out.println(index + ": " + item.name + ". Item price is " + item.price);
             index += 1;
         }
     }

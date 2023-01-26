@@ -11,4 +11,8 @@ public class Item {
         this.name = "no name";
         this.price = -1.0;
     }
+
+    public void printItemName() {
+        System.out.println(name);
+    }
 }
