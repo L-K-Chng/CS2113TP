@@ -40,20 +40,6 @@ public class Main {
                     break;
             }
             waiting = true;
-            /*
-             * if (input.equals("Y")) {
-             * System.out.
-             * println("Please type in the index of the item you wish to buy (in between " +
-             * 0 + " and "
-             * + (thisShop.itemList.size() - 1) + ")");
-             * int itemIndexToBuy = currentSessionScanner.nextInt();
-             * thisShop.buyItem(player, itemIndexToBuy);
-             * } else if (input.equals("N")) {
-             * } else {
-             * System.out.println("INPUT IS :" + input);
-             * System.out.println("Please type in either Y or N please");
-             * }
-             */
         }
 
         System.out.println("Now we are in the \"what do i do now\" phase");
